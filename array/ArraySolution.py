@@ -5,21 +5,10 @@ def search_insert(nums, target):
     r = length - 1
     while l <= r:
         mid = l + ((r - l) / 2)
-        if nums[mid] > target:
+        if nums.index(mid) > target:
             r = mid - 1
-        elif nums[mid] < target:
+        elif nums.index(mid) < target:
             l = mid + 1
         else:
             return mid
     return r + 1
-
-# def remove(nums, target):
-
-
-nums = [1,2,3,3]
-for value in nums:
-    print(value)
-nums.remove(2)
-for value in nums:
-    print(value)
-print(len(nums))
